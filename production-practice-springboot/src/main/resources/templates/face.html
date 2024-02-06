@@ -1,0 +1,240 @@
+<!--coderby:slience_me-->
+<!--time: 2022/9/17 10:51 -->
+<!--time: 2022/9/9 12:07 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>尚云AI平台</title>
+  <link href="/css/face.css" rel="stylesheet">
+  <link href="/css/base.css" rel="stylesheet">
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="/layui/css/layui.css" media="all" rel="stylesheet">
+</head>
+<body>
+<div class="nav-bar">
+  <div class="nav-bar-left"><a href="/index">尚云AI平台</a></div>
+  <div class="nav-bar-right">
+    <ul>
+      <li><a href="/index">首页</a></li>
+      <li class="func-1">
+        计算机视觉
+        <div>
+          <div class="func-1-div-1">
+            <ul>
+              <li class="text-solid">图像处理</li>
+              <li class="text-grey">表情识别</li>
+              <li class="text-blue"><a href="/face">人脸识别</a></li>
+              <li class="text-blue"><a href="/plant">植物识别</a></li>
+              <li class="text-grey">图像分类</li>
+              <li class="text-grey">语义分割</li>
+              <li class="text-grey">风格迁移</li>
+              <li class="text-grey">图像生成</li>
+              <li class="text-grey">目标检测</li>
+              <li class="text-grey">姿态识别</li>
+            </ul>
+          </div>
+          <div class="func-1-div-2">
+            <ul>
+              <li class="text-solid">视频处理</li>
+              <li class="text-grey">视频摘要</li>
+              <li class="text-grey">视频分类</li>
+              <li class="text-blue">视频人脸检测</li>
+              <li class="text-grey">物体识别</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="func-2">
+        自然语言处理
+        <div>
+          <ul>
+            <li class="text-grey">情感分析</li>
+            <li class="text-grey">文本摘要</li>
+            <li class="text-grey">语音识别</li>
+            <li class="text-grey">语法分析</li>
+            <li class="text-grey">句法分析</li>
+            <li class="text-grey">文本相似度</li>
+            <li class="text-grey">文本分类</li>
+          </ul>
+        </div>
+      </li>
+      <li class="func-3">
+        数据服务
+        <div>
+          <ul>
+            <li class="text-grey">数据采集能力</li>
+            <li class="text-grey">大数据服务</li>
+          </ul>
+        </div>
+      </li>
+      <li class="func-4">
+        解决方案
+        <div>
+          <ul>
+            <li class="text-grey">疲劳驾驶检测</li>
+            <li class="text-grey">图片无损放大</li>
+            <li class="text-blue"><a href="/face">人脸识别</a></li>
+            <li class="text-grey">地址识别</li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="about">联系我们</a></li>
+      <li class="func-5" id="loginAlready">
+        <a href=""><img class="layui-nav-img" src="/images/profile.jpg"><span id="span_username">XXX</span></a>
+        <div>
+          <ul>
+            <li class="text-black"><a href="javascript:(0);">个人中心</a></li>
+            <li class="text-black"><a href="javascript:(0);">修改密码</a></li>
+            <li class="text-black" style="text-align: center;"><a id="logout">退出</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="func-6" id="loginNo">
+        <a href="/login"><img class="layui-nav-img" src="/images/profile.jpg">登录</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="content-img">
+  <div class="title">人脸识别</div>
+  <div class="text">基于人的脸部特征信息进行身份识别</div>
+  <div class="content-img-button">
+    <a href="/about">
+      <button>联系我们</button>
+    </a>
+  </div>
+</div>
+<div class="content">
+  <h2>功能介绍</h2>
+  <div class="func-1">
+    <div>
+      <h2 class="h2_1">人脸检测定位</h2>
+      <div>
+        <ul>
+          <li class="text-little">检测图片中的人脸并标记出人脸坐标，支持同时识别多张人脸</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 class="h2_2">图片质量控制</h2>
+      <div>
+        <ul>
+          <li class="text-little">分析图片中的多种特征，确保图片符合质量标准</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 class="h2_3">150关键点定位</h2>
+      <div>
+        <ul>
+          <li class="text-little">精准定位包括双眼、口、鼻等人脸五官关键点</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <h2>功能演示</h2>
+  <div class="func-2">
+    <!--    <div class="img-big">-->
+    <!--      <img src="images/plant/xiao1.jpg" alt="image1" id="img-big">-->
+    <!--    </div>-->
+    <div class="img-big" id="imgBigDiv">
+<!--      <a href="https://baike.baidu.com/item/%E7%8E%AB%E7%91%B0/63206" id='detectResult' target="_blank">识别结果:-->
+<!--        玫瑰(rose)</a>-->
+      <img src="/images/face/textImg2Work.jpg" alt="" class="img-big-up" id="imgBigUp"><br>
+      <img src="/images/face/face1.jpg" alt="" class="img-big-down" id="imgBigDown">
+      <div class="upload">
+        <form action="get">
+          <input class="input-url-button" id='inputUrl' placeholder="请输入网络图片URL" type="text">
+          <input class="detect-button" id='detectButton' type="button" value="检测"> 或
+          <input class="upload-local-button" type="button" value="本地上传">
+        </form>
+      </div>
+      <div class="tip">
+        图片文件类型支持PNG、JPG、JPEG，图片大小不超过2M。
+      </div>
+    </div>
+    <div class="img-small" id="img-small">
+      <img alt="" src="http://tuyun.slienceme.xyz/media/image/1/36df46905e1dece94ae51b394c94cec9.jpg">
+      <img alt="" src="http://tuyun.slienceme.xyz/media/image/1/ff4522231fcf423d994c7402c8ca1fad.jpg">
+      <img alt="" src="http://tuyun.slienceme.xyz/media/image/1/d3c3ddd3a84424319336e7fea0fba15f.jpg">
+      <img alt="" src="http://tuyun.slienceme.xyz/media/image/1/e089ed11292a7abca5c76578d8c6a8b6.jpg">
+    </div>
+  </div>
+  <h2>特色优势</h2>
+  <div class="func-4">
+    <div>
+      <h2 class="h2_1">主流算法</h2>
+      <div>
+        <ul>
+          <li class="text-little">基于caffe框架和海量数据训练，算法识别准确率高</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 class="h2_2">服务稳定高效</h2>
+      <div>
+        <ul>
+          <li class="text-little">提供企业级稳定、精确的大流量服务。支持毫秒级的识别响应能力、弹性灵活的高并发</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 class="h2_3">灵活简单易用</h2>
+      <div>
+        <ul>
+          <li class="text-little">可对SDK进行二次开发，灵活调整业务代码，实现不同的业务功能</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <h2>使用方式</h2>
+  <div class="func-5">
+    <div>
+      <h2 class="h2_1">
+        离线采集SDK</h2>
+      <div>
+        <ul>
+          <li class="text-little">集成到单台硬件设备中，实现人脸检测、人脸关键点采集、在设备端离线完成从静态图片、视频流中检测并捕获人脸功能</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 class="h2_2">
+        私有化部署</h2>
+      <div>
+        <ul>
+          <li class="text-little">提供一体机和软件部署包两种私有化方案 ，在本地服务器部署后，实现图片中的人脸检测、关键点定位和属性识别功能，支持分布式高并发业务处理，适用于安防、监控等场景</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="func-3">
+    <div class="bottom-button">
+      <a href="/about">
+        <button>联系我们</button>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="tab-bar">
+    <div> 友情链接：
+      <a href="#">&emsp;星云大数据平台&emsp;</a>
+      <a href="#">&emsp;尚云科技&emsp;</a>
+      <a href="#">&emsp;天亮教育官网&emsp;</a>
+      <a href="#">&emsp;尚云舆情2.0&emsp;</a>
+    </div>
+    <div> Copyright © 2017-2025 河北尚云信息科技有限公司 备案号:冀ICP备17020003号
+    </div>
+  </div>
+</footer>
+</body>
+<!--<script src="/js/jquery.js"></script>-->
+<script src="/layui/layui.js"></script>
+<script src="/js/init.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/face.js"></script>
+<!--<script src="/js/login.js"></script>-->
+</html>
+<!--coderby:slience_me-->
